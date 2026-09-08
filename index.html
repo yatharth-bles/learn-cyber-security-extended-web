@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comprehensive 50-Module Cybersecurity Mastery Hub</title>
+    <style>
+        :root {
+            --bg-primary: #070a12;
+            --bg-secondary: #0d111e;
+            --card-bg: #151c2e;
+            --text-main: #f3f4f6;
+            --text-muted: #9ca3af;
+            --accent-green: #10b981;
+            --accent-blue: #3b82f6;
+            --accent-red: #ef4444;
+            --accent-purple: #8b5cf6;
+            --accent-yellow: #f59e0b;
+            --code-bg: #030712;
+            --border: #1f293d;
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: 'Segoe UI', system-ui, sans-serif; background-color: var(--bg-primary); color: var(--text-main); line-height: 1.6; display: flex; }
+
+        nav {
+            width: 320px;
+            height: 100vh;
+            background-color: var(--bg-secondary);
+            position: fixed;
+            top: 0;
+            left: 0;
+            overflow-y: auto;
+            border-right: 1px solid var(--border);
+            padding: 20px 10px;
+        }
+
+        nav h2 { font-size: 1.1rem; color: var(--accent-blue); margin-bottom: 15px; padding-left: 10px; text-transform: uppercase; }
+        nav ul { list-style: none; }
+        nav li { margin-bottom: 2px; }
+        nav a { color: var(--text-muted); text-decoration: none; display: block; padding: 6px 10px; border-radius: 4px; font-size: 0.85rem; transition: all 0.2s; }
+        nav a:hover { background-color: var(--card-bg); color: var(--accent-green); }
+
+        main { margin-left: 320px; padding: 40px; max-width: 1200px; width: 100%; }
+        header { margin-bottom: 40px; border-bottom: 1px solid var(--border); padding-bottom: 20px; }
+        header h1 { font-size: 2.5rem; color: var(--accent-blue); margin-bottom: 10px; }
+        
+        .module { background-color: var(--bg-secondary); border: 1px solid var(--border); border-radius: 8px; padding: 25px; margin-bottom: 30px; }
+        .module h2 { font-size: 1.5rem; color: var(--accent-green); margin-bottom: 10px; border-bottom: 1px solid var(--border); padding-bottom: 8px; }
+        .module h3 { font-size: 1.1rem; color: var(--accent-purple); margin: 15px 0 8px 0; }
+        
+        p { margin-bottom: 10px; color: #d1d5db; font-size: 0.95rem; }
+        ul, ol { margin-bottom: 10px; padding-left: 20px; font-size: 0.95rem; }
+        li { margin-bottom: 4px; }
+        
+        pre { background-color: var(--code-bg); border: 1px solid var(--border); border-radius: 6px; padding: 12px; overflow-x: auto; margin: 10px 0; }
+        code { font-family: 'Consolas', monospace; color: var(--accent-blue); font-size: 0.85rem; }
+        
+        .badge { background-color: var(--card-bg); color: var(--accent-yellow); padding: 2px 8px; border-radius: 4px; font-size: 0.75rem; text-transform: uppercase; display: inline-block; margin-bottom: 10px; }
+        .use-case { background-color: rgba(59, 130, 246, 0.1); border-left: 3px solid var(--accent-blue); padding: 10px 15px; margin-top: 10px; border-radius: 0 4px 4px 0; }
+        .use-case strong { color: var(--accent-blue); }
+        table { width: 100%; border-collapse: collapse; margin: 15px 0; font-size: 0.9rem; }
+        th, td { border: 1px solid var(--border); padding: 8px 12px; text-align: left; }
+        th { background-color: var(--card-bg); color: var(--accent-blue); }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <h2>50 Master Modules</h2>
+        <ul>
+            <li><a href="#m1">1. CIA Triad & Risk Modeling</a></li>
+            <li><a href="#m2">2. OSI 7-Layer Deep Dive</a></li>
+            <li><a href="#m3">3. TCP/IP Protocol Suite</a></li>
+            <li><a href="#m4">4. DNS Exploits & DNSSEC</a></li>
+            <li><a href="#m5">5. HTTP Headers & TLS Security</a></li>
+            <li><a href="#m6">6. Core Cryptographic Mathematics</a></li>
+            <li><a href="#m7">7. PKI & Trust Chains</a></li>
+            <li><a href="#m8">8. Symmetric Ciphers (AES-GCM)</a></li>
+            <li><a href="#m9">9. Cryptographic Hashing Algorithms</a></li>
+            <li><a href="#m10">10. Password Hashing Frameworks</a></li>
+            <li><a href="#m11">11. AAA Architecture & IAM</a></li>
+            <li><a href="#m12">12. MFA & FIDO2/WebAuthn</a></li>
+            <li><a href="#m13">13. OAuth 2.0 & OIDC Workflows</a></li>
+            <li><a href="#m14">14. SQL Injection (SQLi) Prevention</a></li>
+            <li><a href="#m15">15. XSS Mitigations & Contexts</a></li>
+            <li><a href="#m16">16. CSRF & SameSite Cookies</a></li>
+            <li><a href="#m17">17. SSRF & Cloud Metadata Exploits</a></li>
+            <li><a href="#m18">18. OS Command Injection</a></li>
+            <li><a href="#m19">19. Broken Access Control (IDOR)</a></li>
+            <li><a href="#m20">20. Insecure Deserialization</a></li>
+            <li><a href="#m21">21. Stateful Firewalls & NGFW</a></li>
+            <li><a href="#m22">22. IDS/IPS Engine Mechanics</a></li>
+            <li><a href="#m23">23. VPN Tunnels (IPSec vs WireGuard)</a></li>
+            <li><a href="#m24">24. Wireless Defense (WPA3)</a></li>
+            <li><a href="#m25">25. Active Reconnaissance (Nmap)</a></li>
+            <li><a href="#m26">26. Deep Packet Inspection (Wireshark)</a></li>
+            <li><a href="#m27">27. Malware Taxonomy & Vectors</a></li>
+            <li><a href="#m28">28. Ransomware Kill Chain</a></li>
+            <li><a href="#m29">29. EDR Telemetry & Behavioral Hooks</a></li>
+            <li><a href="#m30">30. Memory Corruption & Buffer Overflows</a></li>
+            <li><a href="#m31">31. Social Engineering Vectors</a></li>
+            <li><a href="#m32">32. Enterprise OS Hardening</a></li>
+            <li><a href="#m33">33. SIEM Architecture & Detection Rules</a></li>
+            <li><a href="#m34">34. Incident Response Lifecycle</a></li>
+            <li><a href="#m35">35. DFIR & Disk/Memory Forensics</a></li>
+            <li><a href="#m36">36. MITRE ATT&CK Matrix Mapping</a></li>
+            <li><a href="#m37">37. Cloud Shared Responsibility Models</a></li>
+            <li><a href="#m38">38. AWS/Azure Security Controls</a></li>
+            <li><a href="#m39">39. Docker Container Isolation</a></li>
+            <li><a href="#m40">40. Kubernetes Cluster Defense</a></li>
+            <li><a href="#m41">41. DevSecOps CI/CD Pipelines</a></li>
+            <li><a href="#m42">42. API Security (OWASP Top 10)</a></li>
+            <li><a href="#m43">43. Zero Trust Network Access (ZTNA)</a></li>
+            <li><a href="#m44">44. Penetration Testing Methodology</a></li>
+            <li><a href="#m45">45. Reverse Engineering Executables</a></li>
+            <li><a href="#m46">46. Active Directory Exploitation</a></li>
+            <li><a href="#m47">47. Local Privilege Escalation</a></li>
+            <li><a href="#m48">48. IoT Firmware Analysis</a></li>
+            <li><a href="#m49">49. Global Data Privacy Regulations</a></li>
+            <li><a href="#m50">50. Security Governance (ISO/NIST)</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <header>
+            <h1>Full-Spectrum Cybersecurity Knowledge Base</h1>
+            <p>50 Comprehensive modules detailing core security mechanics, offensive vectors, defensive implementations, and practical enterprise use cases.</p>
+        </header>
+
+        <!-- MODULES 1 TO 50 -->
+        <section id="m1" class="module">
+            <span class="badge">Foundations</span>
+            <h2>1. CIA Triad & Threat Modeling</h2>
+            <p>The foundation of information security rests on Confidentiality (preventing unauthorized access), Integrity (preventing unauthorized modification), and Availability (ensuring timely system access). Threat modeling frameworks like STRIDE evaluate system architectures against these three targets.</p>
+            <div class="use-case">
+                <strong>Real-World Application:</strong> Banking software encrypts transaction details (Confidentiality), uses HMAC verification to prevent tampering (Integrity), and balances server workloads across multiple data centers to resist outage spikes (Availability).
+            </div>
+        </section>
+
+        <section id="m2" class="module">
+            <span class="badge">Networking</span>
+            <h2>2. OSI 7-Layer Model Deep Dive</h2>
+            <p>The Open Systems Interconnection model breaks down networking into standard abstraction layers: Physical, Data Link, Network, Transport, Session, Presentation, and Application. Security controls must be implemented across layers to ensure defense-in-depth.</p>
+            <div class="use-case">
+                <strong>Real-World Application:</strong> Network engineers configure 802.1X port authentication at Layer 2 (Data Link) to reject untrusted Ethernet devices before they can obtain an IP address at Layer 3 (Network).
+            </div>
+        </section>
+
+        <section id="m3" class="module">
+            <span class="badge">Networking</span>
+            <h2>3. TCP/IP Architecture & Handshakes</h2>
+            <p>The practical framework governing the internet uses TCP (transmission via 3-way handshake SYN, SYN-ACK, ACK) and UDP (stateless connectionless datagrams). Securing TCP involves validating sequence numbers to prevent session hijacking.</p>
+            <div class="use-case">
+                <strong>Real-World Application:</strong> Firewalls track stateful TCP handshakes to drop spoofed packets that attempt to bypass rule bases using out-of-order ACK flags.
+            </div>
+        </section>
+
+        <section id="m4" class="module">
+            <span class="badge">Networking</span>
+            <h2>4. DNS Exploits & DNSSEC Deployment</h2>
+            <p>Domain Name System translates IP addresses into human-readable names. Without security extensions (DNSSEC), it is vulnerable to Cache Poisoning and DNS Amplification attacks.</p>
+            <div class="use-case">
+                <strong>Real-World Application:</strong> Enterprise administrators deploy DNSSEC cryptographic signatures to prevent attackers from hijacking DNS lookups and redirecting login traffic to rogue phishing mirrors.
+            </div>
+        </section>
+
+        <section id="m5" class="module">
+            <span class="badge">Web Security</span>
+            <h2>5. HTTP/HTTPS Security Headers & TLS</h2>
+            <p>HTTP is plaintext; HTTPS wraps traffic in a Transport Layer Security (TLS) channel. Security headers like Strict-Transport-Security (HSTS), Content-Security-Policy (CSP), and X-Frame-Options instruct browsers to enforce strict client security behavior.</p>
+            <div class="use-case">
+                <strong>Real-World Application:</strong> Adding <code class="inline-code">Strict-Transport-Security: max-age=31536000; includeSubDomains</code> forces browsers to automatically upgrade all unencrypted HTTP requests to HTTPS, neutralising SSL-stripping MitM attacks.
+            </div>
+        </section>
+
+        <section id="m6" class="module">
+            <span class="badge">Cryptography</span>
+            <h2>6. Cryptographic Foundations & Mathematics</h2>
+            <p>Cryptography relies on complex mathematical operations (such as prime factorization and elliptic curve discrete logarithms) to transform data into ciphertext using keys, guaranteeing mathematically verifiable confidentiality.</p>
+            <div class="use-case">
+                <strong>Real-World Application:</strong> Secure messaging applications use Elliptic Curve Cryptography (ECC) to execute fast, low-bandwidth key exchanges on mobile devices without sacrificing cipher strength.
+            </div>
+        </section>
+
+        <section id="m7" class="module">
+            <span class="badge">Cryptography</span>
+            <h2>7. Public Key Infrastructure (PKI) & Digital Certificates</h2>
+            <p>PKI establishes identity on digital networks through asymmetric key pairs managed by trusted Certificate Authorities (CAs). Digital X.509 certificates tie public keys to specific domains or corporate entities.</p>
+            <div class="use-case">
+                <strong>Real-World Application:</strong> Web browsers inspect a website's X.509 certificate and trace its digital signature back to an embedded root CA store to establish a trusted TLS connection.
+            </div>
+        </section>
+
+        <section id="m8" class="module">
+            <span class="badge">Cryptography</span>
+            <h2>8. Symmetric Ciphers & AES-GCM Implementation</h2>
+            <p>Symmetric ciphers use a shared secret key for encryption and decryption. Galois/Counter Mode (AES-GCM) provides both confidentiality and authenticated data integrity checks in a single cryptographic operation.</p>
+            <div class="use-case">
+                <strong>Real-World Application:</strong> Full-disk encryption tools like BitLocker utilize AES-XTS or AES-GCM to instantly encrypt storage volumes without introducing severe CPU degradation.
+            </div>
+        </section>
+
+        <section id="m9" class="module">
+            <span class="badge">Cryptography</span>
+            <h2>9. Cryptographic Hashing Algorithms</h2>
+            <p>Hash functions (SHA-256, SHA-3) map arbitrary-length inputs to fixed-size outputs. They are deterministic, non-reversible, collision-resistant functions used to verify data integrity.</p>
+            <div class="use-case">
+                <strong>Real-World Application:</strong> Software developers publish SHA-256 checksum hashes alongside executable downloads so users can verify that their installation file was not tampered with during transport.
+            </div>
+        </section>
+
+        <section id="m10" class="module">
+            <span class="badge">Cryptography</span>
+            <h2>10. Password Hashing, Salting & Memory-Hard Functions</h2>
+            <p>Simple fast hashes (like MD5 or SHA-1) are vulnerable to GPU rainbow table cracking. Secure authentication relies on salted, computationally intensive, memory-hard algorithms like Argon2, bcrypt, or PBKDF2.</p>
+            <div class="use-case">
+                <strong>Real-World Application:</strong> Identity databases process user passwords using bcrypt with a high work factor (cost factor) to make offline brute-force attacks computationally unviable.
+            </div>
+        </section>
+
+        <section id="m11" class="module">
+            <span class="badge">IAM</span>
+            <h2>11. AAA Architecture & Identity Access Management</h2>
+            <p>IAM controls secure systems through Authentication (verifying identity claims), Authorization (evaluating access policies), and Accounting (logging session activity for compliance auditing).</p>
+            <div class="use-case">
+                <strong>Real-World Application:</strong> Active Directory administrators enforce Role-Based Access Control (RBAC) to ensure financial staff receive explicit read/write access strictly to accounting software folders.
+            </div>
+        </section>
+
+        <section id="m12" class="module">
+            <span class="badge">IAM</span>
+            <h2>12. Multi-Factor Authentication & FIDO2/WebAuthn</h2>
+            <p>MFA demands authentication across distinct factor categories: Knowledge (password), Possession (security token/app), and Inherence (biometrics). FIDO2/WebAuthn offers phishing-resistant authentication via public key cryptography hardware.</p>
+            <div class="use-case">
+                <strong>Real-World Application:</strong> Deploying YubiKey hardware tokens using FIDO2 standards prevents credential theft from phishing pages because hardware tokens bind authentication challenges directly to legitimate domain origins.
+            </div>
+        </section>
+
+        <section id="m13" class="module">
+            <span class="badge">IAM</span>
+            <h2>13. OAuth 2.0 & OpenID Connect Workflows</h2>
+            <p>OAuth 2.0 provides delegated API authorization using access tokens. OpenID Connect (OIDC) extends OAuth 2.0 to add an identity layer, returning JSON Web Tokens (JWTs) containing verified user profile claims.</p>
+            <div class="use-case">
+                <strong>Real-World Application:</strong> "Log in with Google" prompts use OIDC to allow third-party web apps to verify user identities without ever receiving the user's master password.
+            </div>
+        </section>
+
+        <section id="m14" class="module">
+            <span class="badge">Web Security</span>
+            <h2>14. SQL Injection (SQLi) Prevention Techniques</h2>
+            <p>SQL Injection occurs when unvalidated user input is directly concatenated into dynamic SQL statements, allowing attackers to manipulate database logic. Mitigation requires parameterised queries (prepared statements).</p>
+            <pre><code>// Secure NodeJS / MySQL Implementation using Prepared Statements
+const sql = "SELECT id, email, role FROM users WHERE username = ? AND status = ?";
+db.execute(sql, [userInputUsername, 'active'], (err, results) => {
+    // Input is safely parameterized, neutralizing payload string escapes
+});</code></pre>
+            <div class="use-case">
+                <strong>Real-World Application:</strong> Prepared statements separate code instructions from input data, preventing attackers from injecting <code class="inline-code">' OR '1'='1</code> payloads to bypass login controls.
+            </div>
+        </section>
+
+        <section id="m15" class="module">
+            <span class="badge">Web Security</span>
+            <h2>15. Cross-Site Scripting (XSS) Mitigation & Context Encoding</h2>
+            <p>XSS attacks execute malicious client-side JavaScript in a target browser session. Protection requires contextual output encoding, strict HTML sanitization, and imposing an explicit Content Security Policy (CSP).</p>
+            <div class="use-case">
+                <strong>Real-World Application:</strong> Web applications encode dynamic profile names (converting <code class="inline-code">&lt;</code> to <code class="inline-code">&amp;lt;</code>) before rendering them in HTML views, stopping payload execution.
+            </div>
+        </section>
+
+        <section id="m16" class="module">
+            <span class="badge">Web Security</span>
+            <h2>16. Cross-Site Request Forgery (CSRF) Defenses</h2>
+            <p>CSRF attacks trick authenticated user browsers into executing unwanted actions on vulnerable sites. Defenses include unique anti-CSRF state tokens and configuring session cookies with the <code class="inline-code">SameSite=Strict</code> attribute.</p>
+            <div class="use-case">
+                <strong>Real-World Application:</strong> Configuring session cookies with <code class="inline-code">SameSite=Lax</code> or <code class="inline-code">Strict</code> prevents browsers from automatically attaching auth cookies during cross-origin POST requests initiated by external sites.
+            </div>
+        </section>
+
+        <section id="m17" class="module">
+            <span class="badge">Web Security</span>
+            <h2>17. Server-Side Request Forgery (SSRF) Protection</h2>
+            <p>SSRF tricks a server into making unauthorized HTTP requests to internal, isolated infrastructure. Protection involves establishing IP destination whitelists and blocking access to cloud metadata IP blocks (e.g., <code class="inline-code">169.254.169.254</code>).</p>
+            <div class="use-case">
+                <strong>Real-World Application:</strong> Hardening cloud app servers against SSRF prevents attackers from leveraging file preview endpoints to exfiltrate IAM tokens from AWS Instance Metadata Services (IMDSv2).
+            </div>
+        </section>
+
+        <section id="m18" class="module">
+            <span class="badge">Web Security</span>
+            <h2>18. OS Command Injection Countermeasures</h2>
+            <p>Command injection occurs when applications pass untrusted inputs directly to shell execution functions (e.g., <code class="inline-code">system()</code>, <code class="inline-code">exec()</code>). Safe system design requires avoiding system shell calls in favor of built-in API functions.</p>
+            <div class="use-case">
+                <strong>Real-World Application:</strong> Instead of executing a system command like <code class="inline-code">exec("ping " + ip)</code>, developers utilize explicit programming API networking libraries to perform network checks securely.
+            </div>
+        </section>
+
+        <section id="m19" class="module">
+            <span class="badge">Web Security</span>
+            <h2>19. Broken Access Control & IDOR Prevention</h2>
+            <p>Insecure Direct Object Reference (IDOR) allows authenticated users to access resources belonging to others by simply altering parameter IDs in requests. Authorization checks must validate ownership on every request.</p>
+            <div class="use-case">
+                <strong>Real-World Application:</strong> Checking <code class="inline-code">WHERE invoice_id = ? AND user_id = current_session_user</code> prevents users from viewing peer records by sequentially incrementing request URLs.
+            </div>
+        </section>
+
+        <section id="m20" class="module">
+            <span class="badge">Web Security</span>
+            <h2>20. Insecure Deserialization Hazards</h2>
+            <p>Insecure deserialization takes untrusted binary or structured objects and parses them back into application memory, frequently enabling Remote Code Execution (RCE) via gadget chains.</p>
+            <div class="use-case">
+                <strong>Real-World Application:</strong> Migrating away from native object serialization mechanisms (like Java Native Serialization or Python Pickle) to plain, strictly schema-validated JSON formats neutralizes payload execution.
+            </div>
+        </section>
+
+        <section id="m21" class="module">
+            <span class="badge">Defense</span>
+            <h2>21. Stateful Firewalls & Next-Gen Firewalls (NGFW)</h2>
+            <p>Stateful firewalls inspect IP packet header fields and connection tracking tables. NGFWs extend inspection to Layer 7, integrating deep packet analysis, TLS decryption, and IPS threat signatures.</p>
+            <div class="use-case">
+                <strong>Real-World Application:</strong> NGFWs detect command-and-control (C2) beaconing hidden inside outbound HTTPS traffic by decrypting and analyzing packet payloads in real-time.
+            </div>
+        </section>
+
+        <section id="m22" class="module">
+            <span class="badge">Defense</span>
+            <h2>22. Intrusion Detection & Prevention Engines (IDS/IPS)</h2>
+            <p>IDS monitors network segments to trigger alerts when traffic matches attack signatures or anomalies. IPS actively sits inline in network streams to automatically drop malicious frames.</p>
+            <div class="use-case">
+                <strong>Real-World Application:</strong> Snort or Suricata IPS engines analyze inbound HTTP headers and drop incoming traffic matching active exploit signatures for CVE vulnerabilities before they reach internal app servers.
+            </div>
+        </section>
+
+        <section id="m23" class="module">
+            <span class="badge">Defense</span>
+            <h2>23. VPN Tunnels: IPSec vs. WireGuard Architecture</h2>
+            <p>Virtual Private Networks create secure, encrypted overlay channels over untrusted networks. IPSec operates within kernel layers using complex key exchanges, while WireGuard offers a modern, high-speed cryptographic alternative.</p>
+            <div class="use-case">
+                <strong>Real-World Application:</strong> Remote workers launch WireGuard client tunnels to safely access internal corporate code repositories across unencrypted public airport Wi-Fi connections.
+            </div>
+        </section>
+
+        <section id="m24" class="module">
+            <span class="badge">Networking</span>
+            <h2>24. Wireless Defense Mechanics & WPA3 Standards</h2>
+            <p>Legacy wireless protection protocols (WEP, WPA2-Personal) are vulnerable to offline dictionary attacks via captured 4-way handshakes. WPA3 addresses this by enforcing Simultaneous Authentication of Equals (SAE).</p>
+            <div class="use-case">
+                <strong>Real-World Application:</strong> Deploying WPA3-Enterprise neutralizes offline password cracking attempts by securing initial key exchanges against passive wireless packet capture tools.
+            </div>
+        </section>
+
+        <section id="m25" class="module">
+            <span class="badge">Offensive</span>
+            <h2>25. Active Network Reconnaissance with Nmap</h2>
+            <p>Nmap maps networks by sending crafted TCP/UDP packets to target hosts to infer open ports, running services, operating system fingerprints, and potential configuration flaws.</p>
+            <div class="use-case">
+                <strong>Real-World Application:</strong> Penetration testers execute <code class="inline-code">nmap -sV -sC -p- 192.168.1.0/24</code> to discover unauthorized running services across an internal network segment.
+            </div>
+        </section>
+
+        <section id="m26" class="module">
+            <span class="badge">Analysis</span>
+            <h2>26. Deep Packet Inspection via Wireshark</h2>
+            <p>Network protocol analyzers like Wireshark capture raw frames off physical network interface cards (NICs) in promiscuous mode, allowing security teams to inspect protocol fields and troubleshoot network anomalies.</p>
+            <div class="use-case">
+                <strong>Real-World Application:</strong> Threat analysts apply display filters (e.g., <code class="inline-code">http.request.method == "POST"</code>) to reconstruct exfiltrated data files from raw network captures during forensic reviews.
+            </div>
+        </section>
+
+        <section id="m27" class="module">
+            <span class="badge">Threats</span>
+            <h2>27. Malware Taxonomy & Infection Vectors</h2>
+            <p>Malware includes malicious software engineered to perform unauthorized actions. Categories span self-replicating Worms, stealthy Rootkits, destructive Trojans, and covert Spyware payloads.</p>
+            <div class="use-case">
+                <strong>Real-World Application:</strong> Security operations teams sandbox suspicious email attachments to analyze dropped PE binary behavior before payloads infect live host endpoints.
+            </div>
+        </section>
+
+        <section id="m28" class="module">
+            <span class="badge">Threats</span>
+            <h2>28. Ransomware Kill Chain & Extortion Models</h2>
+            <p>Modern double-extortion ransomware operations infiltrate networks, escalate privileges, exfiltrate sensitive files, delete volume shadow copies, and deploy asymmetric encryption across all domain shares.</p>
+            <div class="use-case">
+                <strong>Real-World Application:</strong> Isolating immutable, air-gapped offline backups allows organizations to recover operational infrastructure without succumbing to ransom demands following a breach.
+            </div>
+        </section>
+
+        <section id="m29" class="module">
+            <span class="badge">Defense</span>
+            <h2>29. Endpoint Detection & Response (EDR) Telemetry</h2>
+            <p>EDR agents instrument host operating system kernels to monitor process creation, network sockets, file adjustments, and registry alterations, allowing security teams to detect malicious behaviors and isolate infected hosts.</p>
+            <div class="use-case">
+                <strong>Real-World Application:</strong> EDR tools automatically flag and kill suspicious child processes (e.g., <code class="inline-code">cmd.exe</code> spawned from Microsoft Word) and isolate the infected laptop from the network segment.
+            </div>
+        </section>
+
+        <section id="m30" class="module">
+            <span class="badge">Exploitation</span>
+            <h2>30. Memory Corruption & Buffer Overflow Attacks</h2>
+            <p>Stack-based buffer overflows occur when low-level code (C/C++) fails to enforce bounds checks, allowing inputs to overwrite the return pointer on the stack and divert execution flow to shellcode.</p>
+            <div class="use-case">
+                <strong>Real-World Application:</strong> Compiling applications with Address Space Layout Randomization (ASLR) and Data Execution Prevention (DEP/NX) mitigates simple stack overflow exploits by randomizing memory locations.
+            </div>
+        </section>
+
+        <section id="m31" class="module">
+            <span class="badge">Threats</span>
+            <h2>31. Social Engineering & Phishing Vectors</h2>
+            <p>Social engineering targets human psychology rather than software bugs. Attacks utilize deceptive emails (Spear Phishing), text messages (Smishing), or voice calls (Vishing) to steal credentials or trick users into executing payloads.</p>
+            <div class="use-case">
+                <strong>Real-World Application:</strong> Organizations configure DMARC, DKIM, and SPF records on domain DNS systems to prevent attackers from spoofing corporate email addresses during phishing campaigns.
+            </div>
+        </section>
+
+        <section id="m32" class="module">
+            <span class="badge">Defense</span>
+            <h2>32. Enterprise OS Hardening & Baselines</h2>
+            <p>Hardening minimizes an operating system's attack surface by disabling default user accounts, closing unnecessary network services, applying strict permission masks, and enforcing Center for Internet Security (CIS) benchmarks.</p>
+            <div class="use-case">
+                <strong>Real-World Application:</strong> Applying CIS Group Policy Objects (GPOs) across Windows workstation fleets automatically disables outdated SMBv1 file-sharing protocols to neutralize lateral movement attacks like EternalBlue.
+            </div>
+        </section>
+
+        <section id="m33" class="module">
+            <span class="badge">Operations</span>
+            <h2>33. SIEM Architecture & Detection Rules Engine</h2>
+            <p>Security Information and Event Management platforms aggregate, normalize, and index log data from network endpoints, firewalls, and cloud environments. Correlation rules alert security teams to complex, multi-stage attacks.</p>
+            <div class="use-case">
+                <strong>Real-World Application:</strong> A SIEM triggers a high-severity alert when a single user account logs in from two geographically distant IP addresses within a short 5-minute window ("Impossible Travel").
+            </div>
+        </section>
+
+        <section id="m34" class="module">
+            <span class="badge">Operations</span>
+            <h2>34. Incident Response Lifecycle Frameworks</h2>
+            <p>Following structured frameworks (such as NIST SP 800-61 or SANS) ensures systematic handling of security breaches across six phases: Preparation, Identification, Containment, Eradication, Recovery, and Lessons Learned.</p>
+            <div class="use-case">
+                <strong>Real-World Application:</strong> During a breach, IR teams isolate infected subnet segments (Containment) before removing malicious accounts and restoring clean baseline backups (Eradication & Recovery).
+            </div>
+        </section>
+
+        <section id="m35" class="module">
+            <span class="badge">Analysis</span>
+            <h2>35. Digital Forensics (DFIR) & Evidence Handling</h2>
+            <p>Digital forensics focuses on collecting, preserving, and analyzing system memory dumps, disk images, and system artifacts (such as Windows Event Logs or Shimcache) while maintaining an unbroken Chain of Custody.</p>
+            <div class="use-case">
+                <strong>Real-World Application:</strong> Investigators dump volatile RAM using tools like Volatility to extract active malware encryption keys before powering down compromised server hardware.
+            </div>
+        </section>
+
+        <section id="m36" class="module">
+            <span class="badge">Operations</span>
+            <h2>36. MITRE ATT&CK Matrix Mapping</h2>
+            <p>The MITRE ATT&CK framework organizes adversary actions into a structured matrix of Tactics (goals), Techniques (methods), and Procedures (specific implementations), aiding threat hunting and security engineering.</p>
+            <div class="use-case">
+                <strong>Real-World Application:</strong> Security teams map existing EDR detection capabilities against ATT&CK technique IDs (e.g., T1059.001 PowerShell) to identify gaps in telemetry coverage.
+            </div>
+        </section>
+
+        <section id="m37" class="module">
+            <span class="badge">Cloud</span>
+            <h2>37. Cloud Security & Shared Responsibility Models</h2>
+            <p>Cloud security relies on understanding duty boundaries: Providers (AWS, Azure) secure physical infrastructure, hypervisors, and data centers; customers remain responsible for configuring access policies, network rules, and operating system updates.</p>
+            <div class="use-case">
+                <strong>Real-World Application:</strong> Customers configuring cloud storage buckets must apply correct policy permissions to prevent public internet access to sensitive database dumps.
+            </div>
+        </section>
+
+        <section id="m38" class="module">
+            <span class="badge">Cloud</span>
+            <h2>38. AWS/Azure Security Controls & Cloud Trail Auditing</h2>
+            <p>Cloud environments rely on API-driven control planes. Securing cloud resources requires applying strict IAM policies, isolating Virtual Private Clouds (VPCs), enabling key encryption services (KMS), and logging API calls via CloudTrail.</p>
+            <div class="use-case">
+                <strong>Real-World Application:</strong> Automated Cloud Custodian rules continuously scan cloud environments to terminate unauthorized virtual machines deployed outside designated corporate regions.
+            </div>
+        </section>
+
+        <section id="m39" class="module">
+            <span class="badge">DevSecOps</span>
+            <h2>39. Docker Container Isolation & Security</h2>
+            <p>Docker containers share the host operating system kernel using Linux namespaces and cgroups. Securing containers involves dropping root privileges, mounting read-only root file systems, and scanning base images for vulnerabilities.</p>
+            <pre><code># Secure Multi-Stage Dockerfile Example
+FROM node:18-alpine AS build
+WORKDIR /app
+COPY package*.json ./
+RUN npm ci --only=production
+
+FROM gcr.io/distroless/nodejs18-debian11
+COPY --from=build /app /app
+WORKDIR /app
+USER 10001
+CMD ["server.js"]</code></pre>
+            <div class="use-case">
+                <strong>Real-World Application:</strong> Distroless container images exclude OS shells (like <code class="inline-code">/bin/sh</code>) and package managers, preventing attackers from executing command-line payloads if the application is exploited.
+            </div>
+        </section>
+
+        <section id="m40" class="module">
+            <span class="badge">DevSecOps</span>
+            <h2>40. Kubernetes Cluster Security Architecture</h2>
+            <p>Kubernetes orchestrates containerized applications at scale. Securing clusters involves enforcing Role-Based Access Control (RBAC), applying restrictive NetworkPolicies between namespaces, and locking down the API server.</p>
+            <div class="use-case">
+                <strong>Real-World Application:</strong> Implementing Kubernetes NetworkPolicies prevents compromised front-end web pod containers from establishing direct network connections to underlying backend databases.
+            </div>
+        </section>
+
+        <section id="m41" class="module">
+            <span class="badge">DevSecOps</span>
+            <h2>41. DevSecOps & CI/CD Pipeline Automation</h2>
+            <p>DevSecOps integrates security automated testing directly into continuous integration and deployment pipelines. Security automation includes Static Application Security Testing (SAST), Software Composition Analysis (SCA), and Secret Scanning.</p>
+            <div class="use-case">
+                <strong>Real-World Application:</strong> Automated CI/CD pipeline stages automatically fail build tasks if git commits introduce hardcoded API keys or vulnerable third-party dependencies into code repositories.
+            </div>
+        </section>
+
+        <section id="m42" class="module">
+            <span class="badge">Web Security</span>
+            <h2>42. API Security Standards & OWASP API Top 10</h2>
+            <p>APIs expose direct application business logic. Security risks include Broken Object Level Authorization (BOLA), mass assignment vulnerabilities, unauthenticated endpoints, and missing rate-limiting controls.</p>
+            <div class="use-case">
+                <strong>Real-World Application:</strong> Implementing strict API rate-limiting throttles requests per client token, mitigating automated credential stuffing and denial-of-service attempts against authentication endpoints.
+            </div>
+        </section>
+
+        <section id="m43" class="module">
+            <span class="badge">Architecture</span>
+            <h2>43. Zero Trust Network Architecture (ZTNA)</h2>
+            <p>Zero Trust replaces traditional perimeter-based security with a model built on "Never Trust, Always Verify." Every request—whether originating inside or outside the network—must be fully authenticated, authorized, and encrypted.</p>
+            <div class="use-case">
+                <strong>Real-World Application:</strong> ZTNA solutions continuously evaluate device health and user credentials before granting temporary access to isolated internal corporate apps, replacing legacy, broad-access network VPNs.
+            </div>
+        </section>
+
+        <section id="m44" class="module">
+            <span class="badge">Offensive</span>
+            <h2>44. Penetration Testing Methodologies</h2>
+            <p>Penetration testing simulates real-world attacks to identify security weaknesses across networks, software, and human assets. Methodologies follow structured phases: Reconnaissance, Scanning, Exploitation, Post-Exploitation, and Reporting.</p>
+            <div class="use-case">
+                <strong>Real-World Application:</strong> Ethical hackers conduct authorized penetration tests to discover and document exploitable vulnerabilities before systems are released to production.
+            </div>
+        </section>
+
+        <section id="m45" class="module">
+            <span class="badge">Analysis</span>
+            <h2>45. Reverse Engineering & Binary Analysis</h2>
+            <p>Reverse engineering disassembles compiled binary code into assembly language using tools like Ghidra, IDA Pro, or x64dbg to analyze compiled logic, identify vulnerabilities, or dissect malware behavior.</p>
+            <div class="use-case">
+                <strong>Real-World Application:</strong> Reverse engineers analyze compiled ransomware binaries in disassemblers to locate hardcoded C2 IP addresses or discover cryptographic flaws in decryption logic.
+            </div>
+        </section>
+
+        <section id="m46" class="module">
+            <span class="badge">Offensive</span>
+            <h2>46. Active Directory Exploitation & Kerberoasting</h2>
+            <p>Active Directory (AD) manages permissions across enterprise Windows environments. Common attack vectors include Kerberoasting, where attackers request service tickets for accounts with Service Principal Names (SPNs) to crack their password hashes offline.</p>
+            <div class="use-case">
+                <strong>Real-World Application:</strong> Enforcing long (25+ character) randomly generated passwords for service accounts neutralizes offline hash cracking attempts from Kerberoasting attacks.
+            </div>
+        </section>
+
+        <section id="m47" class="module">
+            <span class="badge">Offensive</span>
+            <h2>47. Local Privilege Escalation Techniques</h2>
+            <p>Privilege escalation involves abusing local misconfigurations (such as unquoted service paths, permissive sudoer permissions, or vulnerable kernel drivers) to elevate access from a standard user to administrator/root privileges.</p>
+            <div class="use-case">
+                <strong>Real-World Application:</strong> System administrators audit Linux environments to remove unnecessary SUID binaries, preventing standard users from executing local root escalation exploits.
+            </div>
+        </section>
+
+        <section id="m48" class="module">
+            <span class="badge">Hardware</span>
+            <h2>48. IoT & Firmware Security Analysis</h2>
+            <p>Internet of Things (IoT) devices often run minimal embedded Linux distributions. Firmware analysis involves extracting image binaries, analyzing file systems for hardcoded credentials, and inspecting exposed hardware interfaces (UART, JTAG).</p>
+            <div class="use-case">
+                <strong>Real-World Application:</strong> Security researchers extract flash memory binaries using Binwalk to identify hardcoded default administrative passwords embedded within commercial router firmware.
+            </div>
+        </section>
+
+        <section id="m49" class="module">
+            <span class="badge">Governance</span>
+            <h2>49. Global Data Privacy Frameworks</h2>
+            <p>Data privacy regulations mandate strict data collection boundaries, data minimization principles, encryption controls, and breach notification windows for organizations managing personal data.</p>
+            <div class="use-case">
+                <strong>Real-World Application:</strong> Implementing automated data deletion workflows ensures organizations comply with the GDPR "Right to be Forgotten" mandates within required legal timeframes.
+            </div>
+        </section>
+
+        <section id="m50" class="module">
+            <span class="badge">Governance</span>
+            <h2>50. Enterprise Security Governance</h2>
+            <p>Security governance aligns security programs with business goals using established frameworks (such as ISO/IEC 27001, NIST CSF, and CIS Controls). It defines risk assessment procedures, policy creation, and continuous compliance monitoring.</p>
+            <div class="use-case">
+                <strong>Real-World Application:</strong> Enterprise security teams align corporate risk matrices with the NIST Cybersecurity Framework (Identify, Protect, Detect, Respond, Recover) to guide executive security investments and measure defense readiness over time.
+            </div>
+        </section>
+
+    </main>
+</body>
+</html>
